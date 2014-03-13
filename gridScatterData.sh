@@ -27,6 +27,7 @@ do
         do
           for r in "${reps[@]}"
           do
+            echo "----------------------------"
             ./gridDataFactory.py $c $m $s $slope $q $r
           done
         done
