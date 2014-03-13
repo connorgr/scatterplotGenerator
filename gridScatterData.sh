@@ -1,6 +1,3 @@
-#!/usr/bin/env bash
-
-
 # c = sys.argv[1] # color layout = ['grouped','random']
 # m = sys.argv[2] # mark size = [4,6,8,10]
 # s = sys.argv[3] # set size = [196, 324, 484]
@@ -30,7 +27,9 @@ do
           for r in "${reps[@]}"
           do
             echo "----------------------------"
-            python /home/connor/scatterplotGenerator/gridDataFactory.py $c $m $s $slope $q $r
+            # qsub -N vizDataGenerator -V -e /home/connor/scatterplotGenerator/gridOut -o /home/connor/scatterplotGenerator/gridOut -l inf ./gridScatterData.sh
+            # python /home/connor/scatterplotGenerator/gridDataFactory.py $c $m $s $slope $q $r
+            qsub -N "vizDataGenerator$r" -V -e /home/connor/scatterplotGenerator/gridOut -o /home/connor/scatterplotGenerator/gridOut -l inf /home/connor/scatterplotGenerator/gridDataFactory.py $c $m $s $slope $q $r
           done
         done
       done
