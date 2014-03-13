@@ -8,6 +8,8 @@
 # q = sys.argv[5] # quadrant = ['tl', 'tr', 'bl', 'br']
 # r = sys.argv[6] # repetition = 10
 
+cd /home/connor/scatterplotGenerator
+
 layouts=( "grouped" "random")
 markSizes=( 4 6 8 10 )
 setSizes=( 196 324 484 )
