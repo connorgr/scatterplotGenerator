@@ -1,0 +1,25 @@
+{
+  "name": "stimuli",
+  "version": "1.0.0",
+  "homepage": "gramaz.io",
+  "authors": [
+    "connor <connor@cs.brown.edu>"
+  ],
+  "description": "A generator for color grids",
+  "main": "makeGridSvgs.js",
+  "keywords": [
+    "d3",
+    "svg"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components"
+  ],
+  "dependencies": {
+    "d3": "~3.3.9",
+    "jquery": "~2.0.3"
+  }
+}
