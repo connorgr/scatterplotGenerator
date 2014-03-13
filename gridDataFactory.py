@@ -31,6 +31,6 @@ print 'Total elapsed time: ' + str(elapsed)
 print '---------------'
 
 fileName = c + '_' + str(s) + '_' + str(m) + '_' + slope + '_' + q + '_' + str(r) + '.json'
-filePath = os.getcwd() + '/' + fileName
+filePath = '/home/connor/scatterplotGenerator/out/' + fileName
 with open(filePath, 'w') as fPath:
   json.dump(d, fPath)
