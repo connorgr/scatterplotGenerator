@@ -29,7 +29,8 @@ do
         do
           for r in "${reps[@]}"
           do
-            ./gridDataFactory.py $c $m $s $slope $q $r
+            echo "----------------------------"
+            python /home/connor/scatterplotGenerator/gridDataFactory.py $c $m $s $slope $q $r
           done
         done
       done
