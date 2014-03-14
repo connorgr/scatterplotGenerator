@@ -20,7 +20,8 @@ for f in files:
 print '\nDone appending data. Saving....'
 
 fileName = str(datetime.datetime.now())
-fPath = '/home/connor/scatterplotGenerator/completeGridData/'+fileName
+fPath = '/home/connor/scatterplotGenerator/completeGridData/'+fileName+'.json'
+print fPath
 json.dump(outData, fPath)
 
 print 'Saving complete. File name: ' + fileName
