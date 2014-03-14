@@ -1,6 +1,7 @@
 import json
 import os
-import time
+import sys
+import datetime
 
 if not os.path.exists('completeGridData'):
   os.makedirs('completeGridData')
@@ -15,7 +16,11 @@ for f in files:
   data = json.load(json_data)
   outData.append(data)
   json_data.close()
+  sys.stdout.write('.')
+print '\nDone appending data. Saving....'
 
-fileName = time.strftime('%c')
+fileName = str(datetime.date()) + '_' + str(datetime.time())
 fPath = '/home/connor/scatterplotGenerator/completeGridData/'+fileName
 json.dump(outData, fPath)
+
+print 'Saving complete. File name: ' + fileName
