@@ -11,7 +11,7 @@ gridData = 'out'
 files = os.listdir(gridData + '/')
 for f in files:
   if '.json' not in f: continue
-  json_data=open(f)
+  json_data=open('out/'+f)
   data = json.load(json_data)
   outData.append(data)
   json_data.close()
