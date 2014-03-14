@@ -2,7 +2,7 @@ FILES=/home/connor/scatterplotGenerator/out/*
 for f in $FILES
 do
   echo "svg${f//\//-}"
-  qsub -cwd -N "svg${f//\//-}" -V -e /home/connor/scatterplotGenerator/gridOut -o /home/connor/scatterplotGenerator/gridOut -l inf /local/bin//node /home/connor/scatterplotGenerator/gridRenderScatter.js --outdir=/home/connor/scatterplotGenerator/svg --json=$f
+  ./submitScatterRender.sh "svg${f//\//-}" $f
 done
 
 #qsub -cwd -N "vizDataGenerator$c$m$s$slope$q$r" -V -e /home/connor/scatterplotGenerator/gridOut -o /home/connor/scatterplotGenerator/gridOut -l inf /home/connor/scatterplotGenerator/gridReady.py $c $m $s $slope $q $r
