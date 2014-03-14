@@ -12,7 +12,7 @@ function executeOnJson(data) {
       markSize = data.markSize,
       quad = data.quad,
       slope = data.slope;
-  runHeadlessBrowser(data, 'svgs/'+colorLayout+'_'+setSize+'_'+markSize+'_'+slope+'_'+quad);
+  runHeadlessBrowser(data, colorLayout+'_'+setSize+'_'+markSize+'_'+slope+'_'+quad);
 }
 
 
