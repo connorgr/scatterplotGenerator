@@ -59,7 +59,7 @@ function write_err(err){
 // Main Content
 
 // Validate args
-var argv = require('optimist').argv;
+var argv = require('/home/connor/scatterplotGenerator/node_modules/optimist').argv;
 if (!( argv.outdir && argv.json )){
     usage  = "Usage: node chartFactory.js --outdir=</path/to/output> --json=</path/to/json>"
     console.log(usage);
