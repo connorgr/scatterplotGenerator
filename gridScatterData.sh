@@ -29,7 +29,7 @@ do
             echo "----------------------------"
             # qsub -N vizDataGenerator -V -e /home/connor/scatterplotGenerator/gridOut -o /home/connor/scatterplotGenerator/gridOut -l inf ./gridScatterData.sh
             # python /home/connor/scatterplotGenerator/gridDataFactory.py $c $m $s $slope $q $r
-            qsub -N "vizDataGenerator$c$m$s$slope$q$r" -V -e /home/connor/scatterplotGenerator/gridOut -o /home/connor/scatterplotGenerator/gridOut -l inf /home/connor/scatterplotGenerator/gridDataFactory.py $c $m $s $slope $q $r
+            qsub -N "vizDataGenerator$c$m$s$slope$q$r" -V -e /home/connor/scatterplotGenerator/gridOut -o /home/connor/scatterplotGenerator/gridOut -l inf /home/connor/scatterplotGenerator/gridReady.py $c $m $s $slope $q $r
           done
         done
       done
