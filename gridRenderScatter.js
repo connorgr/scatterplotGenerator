@@ -5,17 +5,14 @@ var jsdom = require('jsdom')
 ////////////////////////////////////////////////////////////////////////////////////////////////////
 // Functions
 
+// The grid version assumes that there is one scatter plot in a given data object
 function executeOnJson(data) {
-    for (var i=0; i<data.length; i++) {
-      var colorLayout = data[i].colorLayout,
-          setSize = data[i].setSize,
-          markSize = data[i].markSize,
-          quad = data[i].quad,
-          slope = data[i].slope;
-      runHeadlessBrowser(data[i], 'svgs/'+colorLayout+'_'+setSize+'_'+markSize+'_'+slope+'_'+quad);
-      process.stdout.write('.');
-    }
-  console.log('\n >>> Done. Saving results to file.');
+  var colorLayout = data.colorLayout,
+      setSize = data.setSize,
+      markSize = data.markSize,
+      quad = data.quad,
+      slope = data.slope;
+  runHeadlessBrowser(data, 'svgs/'+colorLayout+'_'+setSize+'_'+markSize+'_'+slope+'_'+quad);
 }
 
 
