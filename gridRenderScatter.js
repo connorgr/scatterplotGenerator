@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-var jsdom = require('jsdom')
+var jsdom = require('/home/connor/scatterplotGenerator/node_modules/jsdom')
 , fs = require('fs')
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////
