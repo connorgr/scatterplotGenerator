@@ -19,7 +19,7 @@ for f in files:
   sys.stdout.write('.')
 print '\nDone appending data. Saving....'
 
-fileName = str(datetime.now())
+fileName = str(datetime.datetime.now())
 fPath = '/home/connor/scatterplotGenerator/completeGridData/'+fileName
 json.dump(outData, fPath)
 
