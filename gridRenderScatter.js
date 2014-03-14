@@ -11,8 +11,9 @@ function executeOnJson(data) {
       setSize = data.setSize,
       markSize = data.markSize,
       quad = data.quad,
-      slope = data.slope;
-  runHeadlessBrowser(data, colorLayout+'_'+setSize+'_'+markSize+'_'+slope+'_'+quad);
+      slope = data.slope,
+      repetition = data.repetition;
+  runHeadlessBrowser(data, colorLayout+'_'+setSize+'_'+markSize+'_'+slope+'_'+quad+'_'+repetition);
 }
 
 
