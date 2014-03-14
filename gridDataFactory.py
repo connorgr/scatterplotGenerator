@@ -2,9 +2,11 @@
 
 import json
 import os
-import scatterData
 import sys
 import time
+
+import imp
+scatterData = imp.load_source('module.name', '/path/to/file.py')
 
 c = sys.argv[1] # color layout = ['grouped','random']
 m = int(sys.argv[2]) # mark size = [4,6,8,10]
