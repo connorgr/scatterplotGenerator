@@ -22,6 +22,7 @@ print '\nDone appending data. Saving....'
 fileName = str(datetime.datetime.now())
 fPath = '/home/connor/scatterplotGenerator/completeGridData/'+fileName+'.json'
 print fPath
-json.dump(outData, fPath)
+with open(fPath, 'w') as outfile:
+  json.dump(outData, outfile)
 
 print 'Saving complete. File name: ' + fileName
