@@ -1,7 +1,7 @@
 FILES=/home/connor/scatterplotGenerator/out/*
 for f in $FILES
 do
-  echo "svg${f/\//-}"
+  echo "svg${f//\//-}"
   qsub -cwd -N "svg${f/\//-}" -V -e /home/connor/scatterplotGenerator/gridOut -o /home/connor/scatterplotGenerator/gridOut -l inf node /home/connor/scatterplotGenerator/gridRenderScatter.js --outdir=/home/connor/scatterplotGenerator/svg --json=$f
 done
 
