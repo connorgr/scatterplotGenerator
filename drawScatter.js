@@ -3,7 +3,13 @@ function drawScatter(container, data) {
       markSize = data.markSize;
 
   // Last color is the target
-  var colorSet = ['rgb(120,106,24)','rgb(131,71,80)','rgb(23,73,95)','rgb(0,68,43)','rgb(98,63,117)'];
+  var colorSets = [
+      ['rgb(120,106,24)','rgb(131,71,80)','rgb(23,73,95)','rgb(0,68,43)','rgb(98,63,117)'],
+      ['rgb(131,71,80)','rgb(120,106,24)','rgb(0,68,43)','rgb(23,73,95)','rgb(98,63,117)'],
+      ['rgb(23,73,95)','rgb(0,68,43)','rgb(120,106,24)','rgb(131,71,80)','rgb(98,63,117)'],
+      ['rgb(0,68,43)','rgb(23,73,95)','rgb(131,71,80)','rgb(120,106,24)','rgb(98,63,117)'],
+  ];
+  var colorSet = colorSets[Math.floor(Math.random() * colorSets.length)];
 
   var margin = {'bottom': 10, 'left': 10, 'right': 10, 'top': 10},
       chartH = 800,
@@ -18,7 +24,8 @@ function drawScatter(container, data) {
           .style('background', '#000000')
           .style('display', 'inline-block')
         .append("g")
-          .attr("transform", "translate(" + margin.left + "," + margin.top + ")");;
+          .attr("transform", "translate(" + margin.left + "," + margin.top + ")")
+          .style('border', '1px solid #333');
 
   var x = d3.scale.linear()
     .range([0, chartW]);
